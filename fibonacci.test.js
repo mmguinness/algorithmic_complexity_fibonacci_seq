@@ -20,4 +20,12 @@ describe("fibonacci", () => {
   it("takes the number four and returns an array with first four numbers of fibonacci sequence", () => {
     expect(fibonacci(4)).toEqual([0, 1, 1, 2]);
   });
+
+  it("takes the number five and returns an array with first five numbers of fibonacci sequence", () => {
+    expect(fibonacci(5)).toEqual([0, 1, 1, 2, 3]);
+  });
+
+  it("takes the number ten and returns an array with first ten numbers of fibonacci sequence", () => {
+    expect(fibonacci(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
+  });
 });

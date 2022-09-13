@@ -1,23 +1,16 @@
 const fibonacci = (num) => {
-  const fibonacciSequence = [0];
-  if (num === 0) {
-    return [];
-  } else if (num === 1) {
-    return fibonacciSequence;
-  } else if (num === 2) {
-    fibonacciSequence.push(1);
-    return fibonacciSequence;
-  } else {
-    fibonacciSequence.push(1);
+  const fibonacciSequence = [];
 
-    for (let i = 1; i < num - 1; i++) {
+    for (let i = 0; i <= num - 1; i++) {
+      if (fibonacciSequence.length < 2) {
+        fibonacciSequence.push(i)
+      } else {
       let nextNumberInSequence =
-        fibonacciSequence[i] + fibonacciSequence[i - 1];
-      console.log(nextNumberInSequence);
+        fibonacciSequence[i - 2] + fibonacciSequence[i - 1];
       fibonacciSequence.push(nextNumberInSequence);
     }
-    return fibonacciSequence;
   }
+  return fibonacciSequence;
 };
 
 module.exports = fibonacci;
